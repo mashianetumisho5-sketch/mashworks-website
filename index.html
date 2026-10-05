@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MASHWORKS Services — home repairs, installations, renovations and maintenance in Lebowakgomo and surrounding areas.">
+  <title>MASHWORKS Services | Quality Work. Built to Last.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0c1015;
+      --bg-2: #121821;
+      --panel: rgba(19, 22, 30, 0.9);
+      --soft-panel: rgba(255,255,255,0.04);
+      --text: #f4f4f2;
+      --muted: #d7d9dc;
+      --yellow: #f0c535;
+      --yellow-strong: #e4b728;
+      --line: rgba(255,255,255,0.09);
+      --shadow: rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      background: rgba(15,18,23,0.92);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-mark {
+      width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-mark img {
+      display: block;
+      width: 110px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,0.18));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 0.9;
+      font-family: "Barlow Condensed", sans-serif;
+      text-transform: uppercase;
+    }
+
+    .brand-name {
+      font-size: clamp(2rem, 2.4vw, 3rem);
+      color: var(--yellow);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-sub {
+      font-size: clamp(0.8rem, 1vw, 1.2rem);
+      color: #f5f5f4;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+    }
+
+    .menu-btn {
+      border: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 2.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 700px;
+      padding: 50px 40px 28px;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.72), rgba(0,0,0,0.38)),
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.38) 46%, rgba(0,0,0,0.15) 100%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      max-width: 1410px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      min-height: 600px;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .kicker {
+      font-size: clamp(0.82rem, 1.45vw, 1.4rem);
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .hero-copy h1 {
+      margin: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800;
+      font-size: clamp(4rem, 7.5vw, 9rem);
+      line-height: 0.82;
+      letter-spacing: -0.06em;
+      color: #f3f3f3;
+    }
+
+    .hero-copy h1 span {
+      display: inline-block;
+      color: var(--yellow);
+    }
+
+    .hero-copy p {
+      margin-top: 26px;
+      font-size: clamp(1.05rem, 2vw, 2.2rem);
+      line-height: 1.3;
+      color: #f3f3f3;
+      font-weight: 500;
+      max-width: 710px;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 26px;
+      transition: transform 0.2s ease;
+      font-weight: 800;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn.yellow {
+      background: var(--yellow);
+      color: #111111;
+      padding: 18px 32px;
+      font-size: clamp(1.2rem, 1.8vw, 2rem);
+      box-shadow: 0 12px 25px rgba(240, 197, 53, 0.18);
+    }
+
+    .hero-contact {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn.chat {
+      background: transparent;
+      border: 2px solid rgba(240, 197, 53, 0.75);
+      color: var(--yellow);
+      padding: 14px 22px;
+      font-size: 1.15rem;
+    }
+
+    .call-link {
+      color: var(--yellow);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 500px;
+    }
+
+    .hero-worker {
+      position: relative;
+      width: 520px;
+      height: 620px;
+      background:
+        radial-gradient(circle at 50% 28%, rgba(255,255,255,0.08), transparent 35%),
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.1));
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+    }
+
+    .hero-worker::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        url("https://images.unsplash.com/photo-1581092160607-ee2279d1a4f8?auto=format&fit=crop&w=1200&q=80")
+        center/cover no-repeat;
+      opacity: 0.18;
+      filter: brightness(0.75) contrast(1.2);
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: 34px;
+      bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      border: 2px solid var(--yellow);
+      background: rgba(15,19,24,0.82);
+      border-radius: 20px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    }
+
+    .hero-badge span {
+      color: var(--yellow);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    .hero-badge strong {
+      color: var(--yellow);
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+    }
+
+    .value-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
+      background: #11161d;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .value-item {
+      min-height: 150px;
+      padding: 28px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      border-right: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .value-item:last-child { border-right: none; }
+
+    .value-icon {
+      width: 54px;
+      height: 54px;
+      min-width: 54px;
+      border-radius: 50%;
+      border: 2px solid var(--yellow);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--yellow);
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: rgba(240, 197, 53, 0.05);
+    }
+
+    .value-item h3 {
+      margin: 0;
+      color: var(--yellow);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(1.3rem, 2vw, 2rem);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    .services-overview {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 42px;
+      align-items: center;
+      background: #0c1015;
+      padding: 68px 48px 88px;
+    }
+
+    .kicker.gold {
+      color: var(--yellow);
+      font-size: 1.08rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .services-copy h2 {
+      margin: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800;
+      font-size: clamp(3.3rem, 5vw, 6.3rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      color: #f3f3f3;
+    }
+
+    .services-copy p {
+      margin: 26px 0 34px;
+      max-width: 620px;
+      color: rgba(255,255,255,0.82);
+      font-size: clamp(1.1rem, 1.8vw, 2rem);
+      line-height: 1.35;
+    }
+
+    .dark-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      padding: 18px 26px;
+      border-radius: 22px;
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+
+    .services-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(210px, 1fr));
+      gap: 22px;
+    }
+
+    .mini-card {
+      min-height: 200px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 18px 20px;
+      color: var(--yellow);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .mini-icon {
+      font-size: clamp(2.2rem, 3vw, 3.5rem);
+      margin-bottom: 14px;
+    }
+
+    .mini-card h4 {
+      margin: 0;
+      color: var(--yellow);
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .areas-section {
+      background: #0d1015;
+      padding: 72px 48px 90px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .area-copy h2,
+    .review-panel h2 {
+      margin: 0;
+      color: #f3f3f3;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800;
+      line-height: 0.9;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      letter-spacing: -0.06em;
+    }
+
+    .area-copy p {
+      max-width: 650px;
+      margin: 18px 0 28px;
+      color: rgba(255,255,255,0.82);
+      font-size: clamp(1.05rem, 1.5vw, 1.6rem);
+      line-height: 1.45;
+    }
+
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .area-tags span {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .review-panel {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px 24px;
+    }
+
+    .review-card {
+      margin-top: 24px;
+      background: rgba(240, 197, 53, 0.06);
+      border: 1px solid rgba(240, 197, 53, 0.25);
+      border-radius: 18px;
+      padding: 22px 20px;
+    }
+
+    .stars {
+      color: var(--yellow);
+      letter-spacing: 0.18em;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .review-card p {
+      margin: 0 0 10px;
+      color: var(--text);
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+
+    .review-card small {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+    }
+
+    .quote-section {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+      background: #10161d;
+      padding: 28px 48px 90px;
+    }
+
+    .quote-left {
+      padding-top: 20px;
+    }
+
+    .quote-left h2 {
+      margin: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 4.5vw, 5rem);
+      letter-spacing: -0.05em;
+      line-height: 0.9;
+      color: #f3f3f3;
+    }
+
+    .quote-left p {
+      margin: 20px 0 28px;
+      color: rgba(255,255,255,0.82);
+      font-size: clamp(1.05rem, 1.6vw, 1.55rem);
+      line-height: 1.45;
+      max-width: 560px;
+    }
+
+    .quick-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .quick-contact a {
+      color: var(--text);
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .quote-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .quote-form label {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(12,16,21,0.8);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 14px 15px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .quote-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .quote-form .full {
+      grid-column: 1 / -1;
+    }
+
+    .quote-form .btn.yellow {
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.4rem;
+    }
+
+    .footer {
+      background: #0d1015;
+      border-top: 1px solid var(--line);
+      padding: 40px 48px 60px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-logo {
+      width: 120px;
+    }
+
+    .footer-logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .footer-brand p {
+      margin: 0;
+      color: var(--yellow);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .footer-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-block b {
+      color: var(--yellow);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-block a,
+    .footer-block span {
+      color: #f3f3f3;
+      font-size: 1.05rem;
+      line-height: 1.45;
+    }
+
+    .copyright {
+      grid-column: 1 / -1;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-visual {
+        min-height: 300px;
+      }
+
+      .services-overview {
+        grid-template-columns: 1fr;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .value-strip {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+      }
+
+      .areas-grid,
+      .quote-section,
+      .footer {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-form {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-header {
+        padding: 14px 18px;
+      }
+
+      .brand-mark {
+        width: 90px;
+      }
+
+      .brand-mark img {
+        width: 82px;
+      }
+
+      .brand-name {
+        font-size: 1.8rem;
+      }
+
+      .brand-sub {
+        font-size: 0.7rem;
+      }
+
+      .hero {
+        padding: 28px 18px 24px;
+        min-height: 620px;
+      }
+
+      .hero-copy p {
+        font-size: 1.08rem;
+      }
+
+      .btn.yellow {
+        width: 100%;
+      }
+
+      .hero-contact {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn.chat {
+        width: 100%;
+      }
+
+      .value-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .value-item {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .value-item:last-child { border-bottom: none; }
+
+      .services-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .dark-btn {
+        width: 100%;
+      }
+
+      .areas-section,
+      .quote-section,
+      .footer {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .area-copy h2,
+      .review-panel h2,
+      .quote-left h2 {
+        font-size: 2.4rem;
+      }
+
+      .quick-contact a {
+        font-size: 1rem;
+      }
+
+      .quote-form {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand" aria-label="MASHWORKS Services">
+      <div class="brand-mark">
+        <img src="/Mashworks--website/mashworks-logo.jpg" alt="MASHWORKS Services logo">
+      </div>
+
+      <div class="brand-text">
+        <span class="brand-name">MASH WORKS</span>
+        <span class="brand-sub">SERVICES</span>
+      </div>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">MASH WORKS SERVICES</div>
+
+          <h1>
+            Quality Work.<br>
+            <span>Built to Last.</span>
+          </h1>
+
+          <p>
+            Professional home improvement,<br>
+            installation, repairs and maintenance.<br>
+            From small repairs to bigger projects —<br>
+            we get the job done right.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn yellow" href="#quote">↗ Request a Quote</a>
+          </div>
+
+          <div class="hero-contact">
+            <a class="btn chat" href="https://wa.me/27683541307?text=Hi%20MASHWORKS%2C%20I%27d%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener">
+              ◉ Chat on WhatsApp
+            </a>
+
+            <a class="call-link" href="tel:+27683541307">☎ 068 354 1307</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-worker">
+            <div class="hero-badge">
+              <span>ESTD</span>
+              <strong>2020</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-strip">
+      <div class="value-item">
+        <div class="value-icon">✓</div>
+        <h3>Reliable &amp;<br>Professional</h3>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">🛠</div>
+        <h3>Skilled<br>Technicians</h3>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">⏱</div>
+        <h3>On-Time<br>Service</h3>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">⌂</div>
+        <h3>Quality<br>Guarantee</h3>
+      </div>
+    </section>
+
+    <section class="services-overview">
+      <div class="services-copy">
+        <div class="kicker gold">OUR SERVICES</div>
+        <h2>Your Home.<br>Our Expertise.</h2>
+
+        <p>
+          We handle everything from minor fixes to major installations,
+          making your space safer, better and more functional.
+        </p>
+
+        <a href="#quote" class="btn dark-btn">View All Services →</a>
+      </div>
+
+      <div class="services-cards">
+        <div class="mini-card">
+          <div class="mini-icon">⌂</div>
+          <h4>Home<br>Improvements</h4>
+        </div>
+
+        <div class="mini-card">
+          <div class="mini-icon">🛠</div>
+          <h4>Repairs &amp;<br>Maintenance</h4>
+        </div>
+
+        <div class="mini-card">
+          <div class="mini-icon">🚰</div>
+          <h4>Plumbing<br>Services</h4>
+        </div>
+
+        <div class="mini-card">
+          <div class="mini-icon">⚡</div>
+          <h4>Electrical<br>Services</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="areas-section">
+      <div class="container areas-grid">
+        <div class="area-copy">
+          <div class="kicker gold">OUR SERVICE AREA</div>
+          <h2>Lebowakgomo<br>&amp; Surrounding Areas</h2>
+          <p>
+            Our home base is Lebowakgomo. We can also take projects in surrounding
+            communities and wider Limpopo depending on the job.
+          </p>
+
+          <div class="area-tags">
+            <span>Lebowakgomo</span>
+            <span>Ga-Mashashane</span>
+            <span>Mankweng</span>
+            <span>Polokwane</span>
+            <span>Zebediela</span>
+            <span>Mokopane</span>
+            <span>Burgersfort</span>
+            <span>Surrounding Areas</span>
+          </div>
+        </div>
+
+        <div class="review-panel" id="reviews">
+          <div class="kicker gold">WHAT OUR CLIENTS SAY</div>
+          <h2>Trusted by the Community</h2>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"You dream and plan, we turn it into reality."</p>
+            <small>— MASHWORKS customer reviews</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="quote-section">
+      <div class="quote-left">
+        <div class="kicker gold">LET'S GET TO WORK</div>
+        <h2>Request a Quote</h2>
+        <p>
+          Tell us about your project and your location. If you're not sure which service
+          you need, just describe the job and we'll help you figure it out.
+        </p>
+
+        <div class="quick-contact">
+          <a href="https://wa.me/27683541307?text=Hi%20MASHWORKS%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">
+            ◉ WhatsApp: 068 354 1307
+          </a>
+          <a href="tel:+27683541307">☎ Call: 068 354 1307</a>
+          <a href="mailto:mashworks456@gmail.com">✉ mashworks456@gmail.com</a>
+        </div>
+      </div>
+
+      <form id="quoteForm" class="quote-form">
+        <label>
+          Your Name
+          <input name="name" required placeholder="Your name">
+        </label>
+
+        <label>
+          WhatsApp Number
+          <input name="phone" required type="tel" placeholder="068 354 1307">
+        </label>
+
+        <label>
+          Service Needed
+          <select name="service" required>
+            <option value="">Select service</option>
+            <option>Plumbing</option>
+            <option>Welding &amp; Gates</option>
+            <option>Carpentry</option>
+            <option>Ceiling</option>
+            <option>Doors &amp; Windows</option>
+            <option>Bathroom Installation</option>
+            <option>Painting</option>
+            <option>Renovations</option>
+            <option>General Maintenance</option>
+            <option>Paving</option>
+          </select>
+        </label>
+
+        <label>
+          Location
+          <input name="location" required placeholder="e.g. Lebowakgomo">
+        </label>
+
+        <label class="full">
+          Tell us about the job
+          <textarea name="description" rows="5" placeholder="What needs to be done? Include useful measurements if you have them."></textarea>
+        </label>
+
+        <button class="btn yellow full" type="submit">Send Enquiry →</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="/Mashworks--website/mashworks-logo.jpg" alt="MASHWORKS Services">
+      </div>
+
+      <p>Quality Work. Built to Last.</p>
+    </div>
+
+    <div class="footer-block">
+      <b>WhatsApp / Call</b>
+      <a href="tel:+27683541307">068 354 1307</a>
+    </div>
+
+    <div class="footer-block">
+      <b>Email</b>
+      <a href="mailto:mashworks456@gmail.com">mashworks456@gmail.com</a>
+    </div>
+
+    <div class="footer-block">
+      <b>Service Area</b>
+      <span>Lebowakgomo &amp; surrounding areas<br>Limpopo</span>
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> MASHWORKS Services. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
